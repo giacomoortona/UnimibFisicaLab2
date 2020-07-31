@@ -99,7 +99,7 @@
 ### 2.1.6 Dalla variabile al puntatore e viceversa
 
   * il simbolo ```*```, oltre a comparire nella dichiarazione di un puntatore,
-    rappresenta anche l'opertore che estrae il valore della variabile contenuta
+    rappresenta anche l'operatore che estrae il valore della variabile contenuta
     nell'indirizzo di memoria puntato:
     ```cpp
     int * puntatore_ad_intero = & numero_intero ;
@@ -344,8 +344,8 @@
 
 ### 2.2.2 Passaggio per puntatore
 
-  * nel passaggio per valore, 
-    nel prototipo della funzione fra parentesi e' indidcato il **puntatore alla variabile**
+  * nel passaggio per puntatore, 
+    nel prototipo della funzione fra parentesi e' indicato il **puntatore alla variabile**
     da passare
     ```cpp
     int raddoppia (int * valore)
@@ -372,8 +372,8 @@
 
 ### 2.2.3 Passaggio per referenza
 
-  * nel passaggio per valore, 
-    nel prototipo della funzione fra parentesi e' indidcata la **referenza alla variabile**
+  * nel passaggio per referenza, 
+    nel prototipo della funzione fra parentesi e' indicata la **referenza alla variabile**
     da passare
     ```cpp
     int raddoppiaRef (int & valore)
@@ -409,7 +409,7 @@
   * ritornare il puntatore o la referenza ad una variabile e' **un'operazione rischiosa 
     e non sempre permessa**
   * infatti, ogni volta che una variabile viene definita all'interno della funzione,
-    al termine della funzione viene **elimiata dal calcolatore** (va out of scope)  
+    al termine della funzione viene **eliminata dal calcolatore** (va out of scope)  
 
 ![linea](../immagini/linea.png)
 
@@ -529,7 +529,7 @@
     ```cpp
     delete numero ;
     ```
-  * utilizzare la stack e' detto anche **allocazione dinamica della memoria**
+  * utilizzare la heap e' detto anche **allocazione dinamica della memoria**
 
   | **vantaggi** |
   | --------- |
