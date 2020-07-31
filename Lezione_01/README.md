@@ -10,7 +10,7 @@
   * i **linguaggi di programmazione** sono gli strumenti di scrittura umana 
     delle istruzioni per il calcolatore
   * la **traduzione** delle istruzioni scritte in linguaggi di programmazione
-    in istruzioni per il calcolatore e' effettuata da appositi programmi
+    in istruzioni per il calcolatore e' effettuata da appositi programmi detti **compilatori**
   * l'**esecuzione** di un programma corrisponde al momento in cui il calcolatore 
     segue le istruzioni impartite
 
@@ -46,7 +46,7 @@
 ### 1.1.3 ```C``` e ```C++```
 
   * ```C``` e' un linguaggio di programmazione:
-    * **imperativo**, cioe' che impartisce sequenze di istruzioni al calolatore
+    * **imperativo**, cioe' che impartisce sequenze di istruzioni al calcolatore
     * **procedurale**, cioe' che permette di raggruppare istruzioni in procedure
   * ```C++``` e' un linguaggio di programmazione:
     * che **estende il ```C```**: 
@@ -79,8 +79,8 @@
     che sono frasi ignorate durante la compilazione
     * i commenti in ```C``` iniziano con ```/*``` e terminano con ```*/```:
     ```c
-    \* questo e' un commento
-    *\
+    /* questo e' un commento
+    */
     ```
   * ATTENZIONE: i simboli di apertura e chiusura di commenti **non funzionano come parentesi**
   * in ```C++``` i commenti possono anche iniziare con ```//```  
@@ -112,7 +112,7 @@
       }
     ```
   * entrambe le versioni del programma funzionano ed entrambe le funzioni ```main``` restituiscono alla SHELL
-    un numro intero, chiamato **exit status**
+    un numero intero, chiamato **exit status**
     * solitamente e' ```0``` se tutto e' andato bene, 
       mentre e' un numero non nullo se ci sono stati problemi durante l'esecuzione
       (esistono codici di errori codificati, 
@@ -170,7 +170,7 @@
     sono **incapsulate in librerie**
   * bisogna dichiarare al programma che si vuole utilizzarle
   * per scrivere a schermo, 
-    si utilizza la che gestisce il flusso (stream) di informazione in input (i) ed output (o) 
+    si utilizza la libreria che gestisce il flusso (stream) di informazione in input (i) ed output (o) 
     durante l'esecuzione del programma: ```iostream```
     ```cpp
     #include <iostream>
@@ -185,7 +185,7 @@
         * il compilatore sa dove trovare le librerie standard tramite variabili di ambiente della SHELL
     * la variabile ```cout``` (see-out) rappresenta lo strumento di output; 
       in questo caso, essendo quello standard (```std::```) si tratta dello schermo
-    * la variabile ```endl``` e' la fine della linea, essendo quella standard e' un accapo
+    * la variabile ```endl``` e' la fine della linea, essendo quella standard e' un a capo
     * il simbolo ```<<``` rappresenta l'operatore di redirezione,
       che sposta quello che sta alla propria destra verso sinistra. 
       Quindi in questo caso prima ```endl``` viene incollato a ```42```,
@@ -207,7 +207,7 @@
   | --------------|
 
   * **creazione del programma** da compilare:
-    * vengono eseguite le direttive al preprocessore, che iniziano con il simbolo ```#```
+    * vengono eseguite le direttive richieste al preprocessore, che iniziano con il simbolo ```#```
     * ad esempio, l'istruzione ```#include <iostream>``` chiede al preprocessore
       di copiare al posto della linea stessa tutto il codice sorgente 
       contenuto nella libreria ```iostream```
@@ -240,6 +240,7 @@
     sotto forma di ```array``` di stringhe di tipo ```C```
     * ```argc``` e' il numero di elementi dell'```array```
     * ```argv``` e' l'array stesso
+    * Il primo elemento dell'array e' sempre il nome dell'eseguibile
     ```cpp
     #include <iostream>
 
@@ -450,7 +451,7 @@
 
 ### 1.4.1 l'operatore di assegnazione
 
-  * attribuiscono il valore iniziale ad una variabile:
+  * attribuisce il valore iniziale ad una variabile:
     ```cpp
     int numero = 5 ;
     ```
@@ -729,8 +730,8 @@
       }
     ```
 
-  ![strutture](immagini/while.png)
-
+    ![strutture](immagini/while.png)
+  
     * **le variabili** definite fra parentesi rimangono definite soltanto all'interno
       dello scope del ciclo
     * l'operazione di controllo viene compiuta **prima** di effettuare nell'iterazione corrispondente  
@@ -840,7 +841,7 @@
 
   * una funzione che non restituisce alcun valore si definisce 
     con la parola chiave ```void``` come tipo di ritorno
-    ed al suo interno l'istruzione ```return``` e' immediatamente seguita da una virgola
+    ed al suo interno l'istruzione ```return``` e' immediatamente seguita da un punto e virgola
     ```cpp
     int raddoppia (int input_value) 
       {
@@ -890,7 +891,7 @@
 
 ### 1.6.4 il prototipo di una funzione e la sua implementazione
 
-  * definire una funzione prima di essere chiamata
+  * definire una funzione prima che questa venga chiamata
     e' necessario per **permettere il controllo grammaticale** del codice sorgente 
     da parte del compilatore
   * per effettuare il controllo grammaticale, 
@@ -1089,8 +1090,8 @@
     ```
   * la **funzione ```pow```** ha come primo argomento la base della potenza,
     come secondo argomento il suo esponente
-  * utiilzzare l'espressione ```num * num``` invece di ```pow (num, 2)```  
-    e' **meno dispendioso** in termini di tempo di esecuzione
+  * utiilzzare l'espressione ```num * num``` invece di ```pow (num, 2)``` 
+  e' **meno dispendioso** in termini di tempo di esecuzione
 
 ![linea](../immagini/linea.png)
 
@@ -1102,7 +1103,7 @@
     consumato dal programma,
     espresso in cicli di calcolo
     * la **frequenza dei cicli di calcolo** e' disponibile nella variabile ```CLOCKS_PER_SEC```
-  * l'istruzione ```ctime ()``` resituisce il **tempo trascorso** a partire dal primo gennaio 1970:
+  * l'istruzione ```ctime ()``` resituisce il **tempo trascorso** a partire dal primo gennaio 1970.
 
 ![linea](../immagini/linea.png)
 
